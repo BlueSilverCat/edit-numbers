@@ -1,0 +1,13 @@
+{
+  "atom-workspace": {
+    "F12": "edit-numbers:toggle"
+  },
+  ".edit-numbers.root": {
+    "tab": "edit-numbers:focusNext",
+    "shift-tab": "edit-numbers:focusPrevious",
+    "pageup": "edit-numbers:previous",
+    "pagedown": "edit-numbers:next",
+    "home": "edit-numbers:editAll",
+    "end": "edit-numbers:edit"
+  }
+}

@@ -1,0 +1,74 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+
+atom-text-editor .highlight.edit-numbers {
+  .region {
+    background-color: hsla(0, 0%, 50%, 0.25);
+    border: solid thin hsla(180, 50%, 50%, 1);
+  }
+}
+
+@top: 5px;
+@left: 15px;
+@input-search: 180px;
+@paddingChar: 35px;
+@input-number: 80px;
+@input-text: 100px;
+@newLine: 40px;
+@editColor: hsla(180, 50%, 50%, 1);
+
+.edit-numbers {
+  .readOnly {
+  }
+  tr {
+    margin-top: @top;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  input {
+    &:read-only {
+      color: @text-color-highlight;
+      background-color: @background-color-highlight;
+    }
+    &.input-search {
+      width: @input-search;
+      &.paddingChar {
+        width: @paddingChar;
+      }
+    }
+    &.input-number {
+      width: @input-number;
+      &.newLine {
+        width: @newLine;
+      }
+    }
+    &.input-text {
+      width: @input-text;
+    }
+  }
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: left;
+    &.title {
+      margin-left: @left;
+    }
+  }
+  label {
+    margin-left: @left;
+  }
+  .btn-group {
+    margin-left: @left;
+  }
+  .btn.edit {
+    color: @editColor;
+  }
+  .btn.editAll {
+    color: @editColor;
+  }
+}

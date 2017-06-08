@@ -1,0 +1,19 @@
+{
+  "name": "edit-numbers",
+  "main": "./lib/edit-numbers",
+  "version": "0.0.0",
+  "description": "Edit (serial) numbers in the editor.",
+  "keywords": [
+    "number", "serial number", "increment"
+  ],
+  "activationCommands": {
+    "atom-workspace": ["edit-numbers:toggle", "edit-numbers:settings"]
+  },
+  "repository": "https://github.com/BlueSilverCat/edit-numbers.git",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.17.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
