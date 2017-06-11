@@ -111,18 +111,18 @@ Edit (serial) numbers in the editor.
 # KeyBindings
 Default keybindings
 
-| Keystroke | Command | Selector | Description
-| :- | :- | :- | :-
-| F12 | edit-numbers:toggle | atom-workspace | Open/close panel. (Activate package)
-| none | edit-numbers:settings | atom-workspace | Open package settings. (Activate package)
-| tab | edit-numbers:focusNext | .edit-numbers.root | Forcus next panel element.
-| shift-tab | edit-numbers:focusPrevious | .edit-numbers.root | Forcus previous panel element.
-| pageup | edit-numbers:previous | .edit-numbers.root | Forcus previous matching number.
-| pagedown | edit-numbers:next | .edit-numbers.root | Forcus next matching number.
-| insert | edit-numbers:mark | .edit-numbers.root | Highlight all matching numbers.
-| home | edit-numbers:editAll | .edit-numbers.root | Replace all matching numbers.
-| end | edit-numbers:edit | .edit-numbers.root | Replace a selected number.
-| escape | none | none | Close panel.
+| Keystroke | Command | Selector | Description |
+| :- | :- | :- | :- |
+| F12 | edit-numbers:toggle | atom-workspace | Open/close panel. (Activate package) |
+| none | edit-numbers:settings | atom-workspace | Open package settings. (Activate package) |
+| tab | edit-numbers:focusNext | .edit-numbers.root | Forcus next panel element. |
+| shift-tab | edit-numbers:focusPrevious | .edit-numbers.root | Forcus previous panel element. |
+| pageup | edit-numbers:previous | .edit-numbers.root | Forcus previous matching number. |
+| pagedown | edit-numbers:next | .edit-numbers.root | Forcus next matching number. |
+| insert | edit-numbers:mark | .edit-numbers.root | Highlight all matching numbers. |
+| home | edit-numbers:editAll | .edit-numbers.root | Replace all matching numbers. |
+| end | edit-numbers:edit | .edit-numbers.root | Replace a selected number. |
+| escape | none | none | Close panel. |
 
 # Examples
 
