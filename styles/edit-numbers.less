@@ -16,9 +16,10 @@ atom-text-editor .highlight.edit-numbers {
 @input-search: 180px;
 @paddingChar: 35px;
 @input-number: 80px;
-@input-text: 100px;
+@input-text: 600px;
 @newLine: 40px;
 @editColor: hsla(180, 50%, 50%, 1);
+@editTypeColor: hsla(0, 50%, 50%, 1);
 
 .edit-numbers {
   .readOnly {
@@ -26,7 +27,7 @@ atom-text-editor .highlight.edit-numbers {
   tr {
     margin-top: @top;
     display: flex;
-    justify-content: left;
+    align-content: left;
     align-items: center;
   }
   input {
@@ -54,7 +55,7 @@ atom-text-editor .highlight.edit-numbers {
   span {
     display: inline-flex;
     align-items: center;
-    justify-content: left;
+    align-content: left;
     &.title {
       margin-left: @left;
     }
@@ -70,5 +71,8 @@ atom-text-editor .highlight.edit-numbers {
   }
   .btn.editAll {
     color: @editColor;
+  }
+  select.editType {
+    color: @editTypeColor;
   }
 }

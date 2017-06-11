@@ -7,6 +7,7 @@
     "shift-tab": "edit-numbers:focusPrevious",
     "pageup": "edit-numbers:previous",
     "pagedown": "edit-numbers:next",
+    "insert": "edit-numbers:mark",
     "home": "edit-numbers:editAll",
     "end": "edit-numbers:edit"
   }

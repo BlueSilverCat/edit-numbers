@@ -12,7 +12,7 @@
   "repository": "https://github.com/BlueSilverCat/edit-numbers.git",
   "license": "MIT",
   "engines": {
-    "atom": ">=1.17.0 <2.0.0"
+    "atom": ">=1.17.2 <2.0.0"
   },
   "dependencies": {
   }
