@@ -112,7 +112,7 @@ Edit (serial) numbers in the editor.
 Default keybindings
 
 | Keystroke | Command | Selector | Description |
-| :- | :- | :- | :- |
+| :-- | :-- | :-- | :-- |
 | F12 | edit-numbers:toggle | atom-workspace | Open/close panel. (Activate package) |
 | none | edit-numbers:settings | atom-workspace | Open package settings. (Activate package) |
 | tab | edit-numbers:focusNext | .edit-numbers.root | Forcus next panel element. |
