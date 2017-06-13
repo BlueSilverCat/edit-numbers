@@ -33,9 +33,9 @@ Edit (serial) numbers in the editor.
     Regular expression.  
     If target type selector is not `custom`, this is read only.  
 * output options  
-  * place input  
-    Input a output number's place.  
-    If output number's place lower than this, output number is padding with padding character.  
+  * digits input  
+    Input a output number's digits.  
+    If output number's digits lower than this, output number is padding with padding character.  
   * padding character input  
     Input padding character(s).  
   * align selector  
@@ -44,8 +44,8 @@ Edit (serial) numbers in the editor.
     * left  
     * right_lead_minus  
     If output number is minus, minus sign put to start of string.  
-    e.g. place=4, paddingChar=`_`, `-__1`  
-  * output base selector  
+    e.g. digits=4, paddingChar=`_`, `-__1`  
+  * output radix selector  
     Indicate that output decimal/hexadecimal numbers.  
     * decimal  
     * hexadecimal  
@@ -68,8 +68,8 @@ Edit (serial) numbers in the editor.
     Input a multiply number.  
     Output numbers are multiplied by this number.  
 * display area
-  * replace string area  
-    Indicate the replace string.  
+  * redigits string area  
+    Indicate the redigits string.  
 * operation buttons  
   * mark buton  
     Highlight all matching numbers.  
@@ -92,9 +92,9 @@ Edit (serial) numbers in the editor.
     * modify  
       Modify matching numbers by arithmetic options.  
   * edit button  
-    Replace a selected number.  
+    Redigits a selected number.  
   * edit all button  
-    Replace all matching numbers.  
+    Redigits all matching numbers.  
   * new line input  
     Input a new line number.  
   * new line button  
@@ -120,8 +120,8 @@ Default keybindings
 | pageup | edit-numbers:previous | .edit-numbers.root | Forcus previous matching number. |
 | pagedown | edit-numbers:next | .edit-numbers.root | Forcus next matching number. |
 | insert | edit-numbers:mark | .edit-numbers.root | Highlight all matching numbers. |
-| home | edit-numbers:editAll | .edit-numbers.root | Replace all matching numbers. |
-| end | edit-numbers:edit | .edit-numbers.root | Replace a selected number. |
+| home | edit-numbers:editAll | .edit-numbers.root | Redigits all matching numbers. |
+| end | edit-numbers:edit | .edit-numbers.root | Redigits a selected number. |
 | escape | none | none | Close panel. |
 
 # Examples
@@ -142,7 +142,7 @@ text
 ```
 
 prefix = '', suffix = '', targetType = 'decimal'  
-place = 1, paddingChar = '', align = 'right', outputBase = 'decimal'  
+digits = 1, paddingChar = '', align = 'right', outputRadix = 'decimal'  
 **start = -2**, **end = 5**, increment = 1, add = 0, muliply = 1  
 editType = 'overwrite'  
 ```
@@ -159,7 +159,7 @@ editType = 'overwrite'
 ```
 
 prefix = '', suffix = '', targetType = 'decimal'  
-**place = 4**, **paddingChar = ' '**, align = 'right', outputBase = 'decimal'  
+**digits = 4**, **paddingChar = ' '**, align = 'right', outputRadix = 'decimal'  
 start = -2, end = 5, increment = 1, add = 0, muliply = 1  
 editType = 'overwrite'  
 ```
@@ -176,7 +176,7 @@ editType = 'overwrite'
 ```
 
 prefix = '', suffix = '', targetType = 'decimal'  
-place = 4, paddingChar = ' ', **align = 'right_lead_minus'**, outputBase = 'decimal'  
+digits = 4, paddingChar = ' ', **align = 'right_lead_minus'**, outputRadix = 'decimal'  
 start = -2, end = 5, increment = 1, add = 0, muliply = 1  
 editType = 'overwrite'  
 ```
@@ -193,7 +193,7 @@ editType = 'overwrite'
 ```
 
 prefix = '', suffix = '', targetType = 'decimal'  
-place = 4, **paddingChar = '\*'**, **align = 'left'**, outputBase = 'decimal'  
+digits = 4, **paddingChar = '\*'**, **align = 'left'**, outputRadix = 'decimal'  
 start = -2, end = 5, increment = 1, add = 0, muliply = 1  
 editType = 'overwrite'  
 ```
@@ -210,7 +210,7 @@ editType = 'overwrite'
 ```
 
 prefix = '', suffix = '', targetType = 'decimal'  
-place = 4, **paddingChar = '0'**, **align = 'right'**, **outputBase = 'hexadecimal'**  
+digits = 4, **paddingChar = '0'**, **align = 'right'**, **outputRadix = 'hexadecimal'**  
 **start = 8**, **end = 0**, **increment = 2**, add = 0, muliply = 1  
 editType = 'overwrite'  
 ```
@@ -227,7 +227,7 @@ editType = 'overwrite'
 ```
 
 prefix = '', suffix = '', targetType = 'decimal'  
-place = 4, paddingChar = '0', align = 'right', outputBase = 'hexadecimal', **upperCase**  
+digits = 4, paddingChar = '0', align = 'right', outputRadix = 'hexadecimal', **upperCase**  
 start = 8, end = 0, increment = 2, add = 0, muliply = 1  
 editType = 'overwrite'  
 ```
@@ -259,7 +259,7 @@ text
 ```
 
 prefix = '', suffix = '', **targetType = 'hexadecimal'**,  
-**place = 4**, **paddingChar = ' '**, align = 'right', outputBase = 'decimal',  
+**digits = 4**, **paddingChar = ' '**, align = 'right', outputRadix = 'decimal',  
 start = 0, end = 0, **increment = 0**, add = 0, muliply = 1  
 **editType = 'modify'**  
 ```
@@ -290,7 +290,7 @@ text
 ```
 
 prefix = '', suffix = '', **targetType = 'custom'**, **custom target = ' \*-?\d+'**  
-**place = 4**, **paddingChar = '0'**, align = 'right', outputBase = 'decimal',  
+**digits = 4**, **paddingChar = '0'**, align = 'right', outputRadix = 'decimal',  
 start = 0, end = 0, **increment = 0**, **add = 100**, muliply = 1  
 **editType = 'modify'**  
 ```
@@ -330,7 +330,7 @@ empty file.
 ```
 
 **prefix = '^'**, suffix = '', targetType = 'decimal'  
-**place = 4**, **paddingChar = '0'**, align = 'right', **outputBase = 'hexadecimal'**, **upperCase**  
+**digits = 4**, **paddingChar = '0'**, align = 'right', **outputRadix = 'hexadecimal'**, **upperCase**  
 start = 0, end = 0, increment = 1, add = 0, muliply = 1  
 **editType = 'insert'**  
 ```
@@ -360,7 +360,7 @@ Num 000 Data7 Price Note
 ```
 
 **prefix = 'num '**, suffix = '', **ignoreCase**, targetType = 'decimal'  
-**place = 6**, **paddingChar = '0'**, align = 'right', outputBase = 'decimal',  
+**digits = 6**, **paddingChar = '0'**, align = 'right', outputRadix = 'decimal',  
 start = 0, end = 0, increment = 1, add = 0, muliply = 1  
 editType = 'overwrite'  
 ```
@@ -386,7 +386,7 @@ Num 000006 Data7 Price Note
 ```
 
 **prefix = 'data.\* '**, **suffix = 'price'**, **ignoreCase**, targetType = 'decimal'  
-**place = 2**, **paddingChar = '0'**, align = 'right', outputBase = 'decimal',  
+**digits = 2**, **paddingChar = '0'**, align = 'right', outputRadix = 'decimal',  
 start = 0, end = 0, **increment = 0**, add = 0, muliply = 1  
 **editType = 'insert'**  
 ```
