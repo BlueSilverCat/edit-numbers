@@ -15,88 +15,129 @@ Edit (serial) numbers in the editor.
 
 ![panel](https://raw.githubusercontent.com/BlueSilverCat/edit-numbers/master/panel.png?raw=true)  
 
--   search options  
-    -   prefix input  
+-   1st line. display area.
+    -   `replace string area`  
+        Indicate the replace string.  
+    -   `close button`  
+        Close this panel.
+-   2nd line. operation buttons.  
+    -   `edit type selector`  
+        Select a edit type.  
+        -   `overwrite`  
+            Overwrite matching numbers by output numbers.  
+        -   `insert`  
+            Insert output numbers to between matching prefix and matching suffix.  
+        -   `modify`  
+            Modify matching numbers by arithmetic options.  
+    -   `mark buton`  
+        Highlight all matching numbers.  
+    -   `first button`  
+        Select a first matching number.
+    -   `previous button`  
+        Select a previous matching number.  
+    -   `middile button`  
+        Select a middle matching number.  
+    -   `next button`  
+        Select a next matching number.  
+    -   `last button`  
+        Select a last matching number.  
+    -   `edit button`  
+        Replace a selected number.  
+    -   `edit all button`  
+        Replace all matching numbers.  
+    -   `new line input`  
+        Input a new line number.  
+    -   `new line button`  
+        Append new lines to file tail with the number of `new line input`.  
+    -   `save default button`  
+        Set all current conditions to default values.  
+    -   `load default button`  
+        Reset all conditions to default value.  
+-   3rd line. search conditions.  
+    -   `prefix input`  
         Input a search prefix. Regular expression.
-    -   suffix input  
+    -   `suffix input`  
         Input a search suffix. Regular expression.  
-    -   ignore case checker  
+    -   `ignore case checker`  
         Indicate that a search should ignore case sensitivity.  
-    -   target type selector  
-        Indicate that search decimal/hexadecimal/custom numbers.  
-        -   decimal  
-        -   hexadecimal  
-        -   custom  
-    -   custom target input  
+-   4th line. search target conditions.
+    -   `target padding character input`  
+        Input target numbers padding character(s).  
+    -   `target sign selector`  
+        Select a target numbers sign type.
+        -   `minus`  
+            Match for unsigned numbers or minus sign numbers.
+        -   `plus`  
+            Match for plus sign numbers or minus sign numbers.
+        -   `space`  
+            Match for numbers with leading a blank or minus sign numbers.
+        -   `none`  
+            Match for unsigned numbers.
+    -   `target align selector`  
+        Select a target align type.  
+        -   `right`  
+        -   `left`  
+        -   `right_lead_sign`  
+            sign put to start of string.  
+    -   `target radix selector`  
+        Select a target number radix.  
+        -   `decimal`  
+        -   `hexadecimal`  
+    -   `target case selector`  
+        Select a target number case.  
+        If `target radix selector` is set to `decimal`, this is read only.  
+        -   `both`  
+            Match for lowercase and uppercase.
+        -   `lower`  
+        -   `upper`  
+    -   `use custom target checker`  
+        Indicate whether to use custom target.  
+    -   `custom target input`  
         Input a search target number keyword. Regular expression.  
-        If target type selector is not `custom`, this is read only.  
--   output options  
-    -   digits input  
-        Input a output number's digits.  
-        If output number's digits lower than this, output number is padding with padding character.  
-    -   padding character input  
-        Input padding character(s).  
-    -   align selector  
-        Indicate align type.  
-        -   right  
-        -   left  
-        -   right_lead_minus  
-            If output number is minus, minus sign put to start of string.  
-            e.g. digits=4, paddingChar=\`_`,`-\_\_1\`  
-    -   output radix selector  
-        Indicate that output decimal/hexadecimal numbers.  
-        -   decimal  
-        -   hexadecimal  
-    -   upper case checker  
+        If `use custom target checker` is not checked, this is read only.  
+-   5th line. output formats  
+    -   `digits input`  
+        Input a output numbers digits.  
+        If output numbers digits lower than this, output number is padding with `padding character`.  
+    -   `padding character input`  
+        Input output numbers padding character(s).  
+    -   `sign selector`  
+        Select a output numbers sign type.
+        -   `minus`  
+            Indicates that a sign should be used only for negative numbers.
+        -   `plus`  
+            Indicates that a sign should be used for both positive as well as negative numbers.
+        -   `space`  
+            Indicates that a leading space should be used on positive numbers, and a minus sign on negative numbers.
+    -   `align selector`  
+        Select a output numbers align type.  
+        -   `right`  
+        -   `left`  
+        -   `right_lead_sign`  
+            sign put to start of string.  
+            e.g. digits=4, paddingChar=`*`, result =`-**1`  
+    -   `output radix selector`  
+        Select a output numbers radix.  
+        -   `decimal`  
+        -   `hexadecimal`  
+    -   `upper case checker`  
         Indicate that output hexadecimal numbers are lower/upper case letter.  
--   arithmetic options  
-    -   start input  
+-   6th line. arithmetic options  
+    -   `start input`  
         Input a start number.  
         Output numbers are start from this number.  
-    -   end input  
+    -   `end input`  
         Input a end number.  
         Output numbers are end by this number.  
-    -   increment input  
+    -   `increment input`  
         Input a increment number.  
         Next output number is incremented by this number.  
-    -   add input  
+    -   `add input`  
         Input a add number.  
         Output numbers are added to this number.  
-    -   multiply input  
+    -   `multiply input`  
         Input a multiply number.  
         Output numbers are multiplied by this number.  
--   display area
-    -   replace string area  
-        Indicate the replace string.  
--   operation buttons  
-    -   mark buton  
-        Highlight all matching numbers.  
-    -   first button  
-        Select a first matching number.  
-    -   middile button  
-        Select a middle matching number.  
-    -   last button  
-        Select a last matching number.  
-    -   previous button  
-        Select a previous matching number.  
-    -   next button  
-        Select a next matching number.  
-    -   edit type selector  
-        Indicate edit type.  
-        -   overwrite  
-            Overwrite matching numbers by output numbers.  
-        -   insert  
-            Insert output numbers to between matching prefix and matching suffix.  
-        -   modify  
-            Modify matching numbers by arithmetic options.  
-    -   edit button  
-        Replace a selected number.  
-    -   edit all button  
-        Replace all matching numbers.  
-    -   new line input  
-        Input a new line number.  
-    -   new line button  
-        Append new lines to file tail to the number of `new line input`.  
 
 # Settings
 
@@ -105,7 +146,7 @@ Edit (serial) numbers in the editor.
 -   Auto Focus Position  
     Indicate the position to be autofocused.  
 -   defaultValue  
-    Indicate each default value.  
+    Indicate each default values.  
 
 # KeyBindings
 
@@ -115,10 +156,10 @@ Default keybindings
 | :-------- | :------------------------- | :----------------- | :---------------------------------------- |
 | F12       | edit-numbers:toggle        | atom-workspace     | Open/close panel. (Activate package)      |
 | none      | edit-numbers:settings      | atom-workspace     | Open package settings. (Activate package) |
-| tab       | edit-numbers:focusNext     | .edit-numbers.root | Forcus next panel element.                |
-| shift-tab | edit-numbers:focusPrevious | .edit-numbers.root | Forcus previous panel element.            |
-| pageup    | edit-numbers:previous      | .edit-numbers.root | Forcus previous matching number.          |
-| pagedown  | edit-numbers:next          | .edit-numbers.root | Forcus next matching number.              |
+| tab       | edit-numbers:focusNext     | .edit-numbers.root | Focus next panel element.                 |
+| shift-tab | edit-numbers:focusPrevious | .edit-numbers.root | Focus previous panel element.             |
+| pageup    | edit-numbers:previous      | .edit-numbers.root | Focus previous matching number.           |
+| pagedown  | edit-numbers:next          | .edit-numbers.root | Focus next matching number.               |
 | insert    | edit-numbers:mark          | .edit-numbers.root | Highlight all matching numbers.           |
 | home      | edit-numbers:editAll       | .edit-numbers.root | Replace all matching numbers.             |
 | end       | edit-numbers:edit          | .edit-numbers.root | Replace a selected number.                |
@@ -128,254 +169,526 @@ Default keybindings
 
 ## case1
 
-text
+Input text is as below.
 
-    2
-    1
-    4
-    3
-    6
-    5
-    8
-    10
-    7
-    9
+```text
+2
+1
+4
+3
+6
+5
+8
+10
+7
+9
+```
 
-prefix = '', suffix = '', targetType = 'decimal'  
-digits = 1, paddingChar = '', align = 'right', outputRadix = 'decimal'  
+editType = 'overwrite'  
+prefix = '', suffix = '', ignoreCase=false  
+targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
+  targetRadix = 'decimal', targetCase = 'both', useCustom = false  
+digits = 1, paddingChar = '0', sign = 'minus', align = 'right', radix = 'decimal', upperCase=true  
 **start = -2**, **end = 5**, increment = 1, add = 0, muliply = 1  
+
+Change conditions as above then push `editAll` button.  
+Then the result is as below.
+
+```text
+-2
+-1
+0
+1
+2
+3
+4
+5
+-2
+-1
+```
+
 editType = 'overwrite'  
-
-    -2
-    -1
-    0
-    1
-    2
-    3
-    4
-    5
-    -2
-    -1
-
-prefix = '', suffix = '', targetType = 'decimal'  
-**digits = 4**, **paddingChar = ' '**, align = 'right', outputRadix = 'decimal'  
+prefix = '', suffix = '', ignoreCase=false  
+targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
+  targetRadix = 'decimal', targetCase = 'both', useCustom = false  
+**digits = 4**, **paddingChar = ' '**, sign = 'minus', align = 'right', radix = 'decimal', upperCase=true  
 start = -2, end = 5, increment = 1, add = 0, muliply = 1  
+
+Change conditions as above then push `editAll` button.  
+Then the result is as below.
+
+```text
+  -2
+  -1
+   0
+   1
+   2
+   3
+   4
+   5
+  -2
+  -1
+```
+
 editType = 'overwrite'  
-
-      -2
-      -1
-       0
-       1
-       2
-       3
-       4
-       5
-      -2
-      -1
-
-prefix = '', suffix = '', targetType = 'decimal'  
-digits = 4, paddingChar = ' ', **align = 'right_lead_minus'**, outputRadix = 'decimal'  
+prefix = '', suffix = '', ignoreCase=false  
+targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
+  targetRadix = 'decimal', targetCase = 'both', useCustom = false  
+digits = 4, paddingChar = ' ', **sign = 'plus'**, align = 'right', radix = 'decimal', upperCase=true  
 start = -2, end = 5, increment = 1, add = 0, muliply = 1  
+
+Change conditions as above then push `editAll` button.  
+Then the result is as below.
+
+```text
+  -2
+  -1
+  +0
+  +1
+  +2
+  +3
+  +4
+  +5
+  -2
+  -1
+```
+
 editType = 'overwrite'  
-
-    -  2
-    -  1
-       0
-       1
-       2
-       3
-       4
-       5
-    -  2
-    -  1
-
-prefix = '', suffix = '', targetType = 'decimal'  
-digits = 4, **paddingChar = '\*'**, **align = 'left'**, outputRadix = 'decimal'  
+prefix = '', suffix = '', ignoreCase=false  
+targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
+  targetRadix = 'decimal', targetCase = 'both', useCustom = false  
+digits = 4, **paddingChar = '\*'**, **sign = 'space'**, align = 'right', radix = 'decimal', upperCase=true  
 start = -2, end = 5, increment = 1, add = 0, muliply = 1  
+
+Change conditions as above then push `editAll` button.  
+Then the result is as below.
+
+```text
+**-2
+**-1
+** 0
+** 1
+** 2
+** 3
+** 4
+** 5
+**-2
+**-1
+```
+
 editType = 'overwrite'  
+prefix = '', suffix = '', ignoreCase=false  
+targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
+  targetRadix = 'decimal', targetCase = 'both', useCustom = false  
+digits = 4, **paddingChar = ' '**, **sign = 'minus'**, **align = 'right_lead_sign'**, radix = 'decimal', upperCase=true  
+start = -2, end = 5, increment = 1, add = 0, muliply = 1  
 
-    -2**
-    -1**
-    0***
-    1***
-    2***
-    3***
-    4***
-    5***
-    -2**
-    -1**
+Change conditions as above then push `editAll` button.  
+Then the result is as below.
 
-prefix = '', suffix = '', targetType = 'decimal'  
-digits = 4, **paddingChar = '0'**, **align = 'right'**, **outputRadix = 'hexadecimal'**  
+```text
+-  2
+-  1
+   0
+   1
+   2
+   3
+   4
+   5
+-  2
+-  1
+```
+
+editType = 'overwrite'  
+prefix = '', suffix = '', ignoreCase=false  
+targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
+  targetRadix = 'decimal', targetCase = 'both', useCustom = false  
+digits = 4, **paddingChar = '\*'**, sign = 'minus', **align = 'left'**, radix = 'decimal', upperCase=true  
+start = -2, end = 5, increment = 1, add = 0, muliply = 1  
+
+Change conditions as above then push `editAll` button.  
+Then the result is as below.
+
+```text
+-2**
+-1**
+0***
+1***
+2***
+3***
+4***
+5***
+-2**
+-1**
+```
+
+editType = 'overwrite'  
+prefix = '', suffix = '', ignoreCase=false  
+targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
+  targetRadix = 'decimal', targetCase = 'both', useCustom = false  
+digits = 4, **paddingChar = '0'**, sign = 'minus', **align = 'right'**, **radix = 'hexadecimal'**, upperCase=true  
 **start = 8**, **end = 0**, **increment = 2**, add = 0, muliply = 1  
+
+Change conditions as above then push `editAll` button.  
+Then the result is as below.
+
+```text
+0008
+000A
+000C
+000E
+0010
+0012
+0014
+0016
+0018
+001A
+```
+
 editType = 'overwrite'  
-
-    0008
-    000a
-    000c
-    000e
-    0010
-    0012
-    0014
-    0016
-    0018
-    001a
-
-prefix = '', suffix = '', targetType = 'decimal'  
-digits = 4, paddingChar = '0', align = 'right', outputRadix = 'hexadecimal', **upperCase**  
+prefix = '', suffix = '', ignoreCase=false  
+targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
+  targetRadix = 'decimal', targetCase = 'both', useCustom = false  
+digits = 4, paddingChar = '0', sign = 'minus', align = 'right', radix = 'hexadecimal', **upperCase=false**  
 start = 8, end = 0, increment = 2, add = 0, muliply = 1  
-editType = 'overwrite'  
 
-    0008
-    000A
-    000C
-    000E
-    0010
-    0012
-    0014
-    0016
-    0018
-    001A
+Change conditions as above then push `editAll` button.  
+Then the result is as below.
+
+```text
+0008
+000a
+000c
+000e
+0010
+0012
+0014
+0016
+0018
+001a
+```
 
 ## case2
 
-text
+Input text is as below.
 
-    0008
-    000A
-    000C
-    000E
-    0010
-    0012
-    0014
-    0016
-    0018
-    001A
+```text
+0008
+000A
+000C
+000E
+0010
+0012
+0014
+0016
+0018
+001A
+```
 
-prefix = '', suffix = '', **targetType = 'hexadecimal'**,  
-**digits = 4**, **paddingChar = ' '**, align = 'right', outputRadix = 'decimal',  
-start = 0, end = 0, **increment = 0**, add = 0, muliply = 1  
 **editType = 'modify'**  
+prefix = '', suffix = '', ignoreCase=false  
+targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
+  **targetRadix = 'hexadecimal'**, targetCase = 'both', useCustom = false  
+**digits = 4**, **paddingChar = ' '**, sign = 'minus', align = 'right', radix = 'hexadecimal', upperCase=true  
+start = 0, end = 0, **increment = 0**, add = 0, muliply = 1  
 
-       8
-      10
-      12
-      14
-      16
-      18
-      20
-      22
-      24
-      26
+Change conditions as above then push `editAll` button.  
+Then the result is as below.
+
+```text
+   8
+  10
+  12
+  14
+  16
+  18
+  20
+  22
+  24
+  26
+```
 
 ## case3
 
-text
+Input text is as below.
 
-       8
-      11
-      14
-      17
-      20
-      23
-      26
-      29
-      32
-      35
+```text
+00-5
+00-4
+00-3
+00-2
+00-1
+0000
+0001
+0002
+0003
+0004
+0005
+```
 
-prefix = '', suffix = '', **targetType = 'custom'**, **custom target = ' \*-?\\d+'**  
-**digits = 4**, **paddingChar = '0'**, align = 'right', outputRadix = 'decimal',  
-start = 0, end = 0, **increment = 0**, **add = 100**, muliply = 1  
 **editType = 'modify'**  
+**prefix = '^'**, **suffix = '$'**, ignoreCase=false  
+targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
+  targetRadix = 'decimal', targetCase = 'both', useCustom = false  
+**digits = 4**, **paddingChar = ' '**, sign = 'minus', **align = 'right_lead_sign'**, radix = 'decimal', upperCase=true  
+start = 0, end = 0, **increment = 0**, add = 0, muliply = 1  
 
-    0108
-    0111
-    0114
-    0117
-    0120
-    0123
-    0126
-    0129
-    0132
-    0135
+Change conditions as above then push `editAll` button.  
+Then the result is as below.
+
+```text
+-  5
+-  4
+-  3
+-  2
+-  1
+   0
+   1
+   2
+   3
+   4
+   5
+```
 
 ## case4
 
-text
+Input text is as below.
 
-    empty file.
+```text
+-5**
+-4**
+-3**
+-2**
+-1**
+ 0**
+ 1**
+ 2**
+ 3**
+ 4**
+ 5**
+```
+
+**editType = 'modify'**  
+**prefix = '^'**, **suffix = '$'**, ignoreCase=false  
+**targetPadding = '\*'**, **targetSign = 'space'**, **targetAlign = 'left'**,  
+  targetRadix = 'decimal', targetCase = 'both', useCustom = false  
+**digits = 4**, paddingChar = '0', sign = 'minus', **align = 'right_lead_sign'**, radix = 'decimal', upperCase=true  
+start = 0, end = 0, **increment = 0**, add = 0, muliply = 1  
+
+Change conditions as above then push `editAll` button.  
+Then the result is as below.
+
+```text
+-005
+-004
+-003
+-002
+-001
+0000
+0001
+0002
+0003
+0004
+0005
+```
+
+# case5
+
+Input text is as below.
+
+```text
+0008
+000B
+000E
+0011
+0014
+0017
+001A
+001D
+0020
+0023
+```
+
+**editType = 'modify'**  
+**prefix = '^'**, **suffix = '$'**, ignoreCase=false  
+targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
+  **targetRadix = 'hexadecimal'**, targetCase = 'both', useCustom = false  
+**digits = 4**, paddingChar = '0', sign = 'minus', align = 'right', radix = 'decimal', upperCase=true  
+start = 0, end = 0, **increment = 0**, **add = 100**, **muliply = 2**  
+
+Change conditions as above then push `editAll` button.  
+Then the result is as below.
+
+```text
+0116
+0122
+0128
+0134
+0140
+0146
+0152
+0158
+0164
+0170
+```
+
+## case5
+
+input text is empty.
 
 1.  Input 10 to new line input.
 2.  Push newLine button.
 
+```text
+
+
+
+
+
+
+
+
+
 
 ```
 
-```
-
-**prefix = '^'**, suffix = '', targetType = 'decimal'  
-**digits = 4**, **paddingChar = '0'**, align = 'right', **outputRadix = 'hexadecimal'**, **upperCase**  
-start = 0, end = 0, increment = 1, add = 0, muliply = 1  
 **editType = 'insert'**  
+**prefix = '^'**, **suffix = '$'**, ignoreCase=false  
+targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
+  targetRadix = 'decimal', targetCase = 'both', useCustom = false  
+**digits = 4**, paddingChar = '0', sign = 'minus', align = 'right', **radix = 'hexadecimal'**, upperCase=true  
+**start = 1**, end = 0, increment = 1, add = 0, muliply = 1  
 
-    0000
-    0001
-    0002
-    0003
-    0004
-    0005
-    0006
-    0007
-    0008
-    0009
-    000A
+Change conditions as above then push `editAll` button.  
+Then the result is as below.
 
-## case5
-
-text
-
-    Num 000 Data1 Price Note
-    Num 000 Data2 Price Note
-    Num 000 Data3 Price Note
-    Num 000 Data4 Price Note
-    Num 000 Data5 Price Note
-    Num 000 Data6 Price Note
-    Num 000 Data7 Price Note
-
-**prefix = 'num '**, suffix = '', **ignoreCase**, targetType = 'decimal'  
-**digits = 6**, **paddingChar = '0'**, align = 'right', outputRadix = 'decimal',  
-start = 0, end = 0, increment = 1, add = 0, muliply = 1  
-editType = 'overwrite'  
-
-    Num 000000 Data1 Price Note
-    Num 000001 Data2 Price Note
-    Num 000002 Data3 Price Note
-    Num 000003 Data4 Price Note
-    Num 000004 Data5 Price Note
-    Num 000005 Data6 Price Note
-    Num 000006 Data7 Price Note
+```text
+0001
+0002
+0003
+0004
+0005
+0006
+0007
+0008
+0009
+000A
+```
 
 ## case6
 
-text
+Input text is as below.
 
-    Num 000000 Data1 Price Note
-    Num 000001 Data2 Price Note
-    Num 000002 Data3 Price Note
-    Num 000003 Data4 Price Note
-    Num 000004 Data5 Price Note
-    Num 000005 Data6 Price Note
-    Num 000006 Data7 Price Note
+```text
+Num 000 Data1 Price Note
+Num 000 Data2 Price Note
+Num 000 Data3 Price Note
+Num 000 Data4 Price Note
+Num 000 Data5 Price Note
+Num 000 Data6 Price Note
+Num 000 Data7 Price Note
+```
 
-**prefix = 'data.\* '**, **suffix = 'price'**, **ignoreCase**, targetType = 'decimal'  
-**digits = 2**, **paddingChar = '0'**, align = 'right', outputRadix = 'decimal',  
-start = 0, end = 0, **increment = 0**, add = 0, muliply = 1  
+**editType = 'overwrite'**  
+**prefix = 'num '**, suffix = '', **ignoreCase=true**  
+targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
+  targetRadix = 'decimal', targetCase = 'both', useCustom = false  
+**digits = 6**, paddingChar = '0', sign = 'minus', align = 'right', radix = 'decimal', upperCase=true  
+start = 0, end = 0, increment = 1, add = 0, muliply = 1  
+
+Change conditions as above then push `editAll` button.  
+Then the result is as below.
+
+```text
+Num 000000 Data1 Price Note
+Num 000001 Data2 Price Note
+Num 000002 Data3 Price Note
+Num 000003 Data4 Price Note
+Num 000004 Data5 Price Note
+Num 000005 Data6 Price Note
+Num 000006 Data7 Price Note
+```
+
+## case7
+
+Input text is as below.
+
+```text
+Num 000000 Data1 Price Note
+Num 000001 Data2 Price Note
+Num 000002 Data3 Price Note
+Num 000003 Data4 Price Note
+Num 000004 Data5 Price Note
+Num 000005 Data6 Price Note
+Num 000006 Data7 Price Note
+```
+
 **editType = 'insert'**  
+**prefix = 'data. '**, **suffix = 'price'**, **ignoreCase=true**  
+targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
+  targetRadix = 'decimal', targetCase = 'both', useCustom = false  
+**digits = 2**, paddingChar = '0', sign = 'minus', align = 'right', radix = 'decimal', upperCase=true  
+start = 0, end = 0, **increment = 0**, add = 0, muliply = 1  
 
-    Num 000000 Data1 00Price0 Note
-    Num 000001 Data2 00Price1 Note
-    Num 000002 Data3 00Price2 Note
-    Num 000003 Data4 00Price3 Note
-    Num 000004 Data5 00Price4 Note
-    Num 000005 Data6 00Price5 Note
-    Num 000006 Data7 00Price6 Note
+Change conditions as above then push `editAll` button.  
+Then the result is as below.
+
+```text
+Num 000000 Data1 00Price0 Note
+Num 000001 Data2 00Price1 Note
+Num 000002 Data3 00Price2 Note
+Num 000003 Data4 00Price3 Note
+Num 000004 Data5 00Price4 Note
+Num 000005 Data6 00Price5 Note
+Num 000006 Data7 00Price6 Note
+```
+
+## case8
+
+Input text is as below.
+
+```text
+  :
+01:
+02:
+  :
+  :
+03:
+04:
+05:
+  :
+06:
+FF:
+FE:
+  :
+0a:
+13:
+```
+
+**editType = 'overwrite'**  
+**prefix = '^'**, **suffix = ':'**, ignoreCase=false  
+targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
+  **targetRadix = 'hexadecimal'**, targetCase = 'both', **useCustom = true**, **customTarget='0\*-?[0-9a-fA-F]+|(  )'**  
+**digits = 2**, paddingChar = '0', sign = 'minus', align = 'right', **radix = 'hexadecimal'**, upperCase=true  
+start = 0, end = 0, increment = 1, add = 0, muliply = 1  
+
+Change conditions as above then push `editAll` button.  
+Then the result is as below.
+
+```text
+01:
+02:
+03:
+04:
+05:
+06:
+07:
+08:
+09:
+0A:
+0B:
+0C:
+0D:
+0E:
+0F:
+```
