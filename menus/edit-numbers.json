@@ -1,22 +1,17 @@
 {
-  "menu": [
-    {
-      "label": "Packages",
-      "submenu": [
+  "menu": [{
+    "label": "Packages",
+    "submenu": [{
+      "label": "edit-numbers",
+      "submenu": [{
+          "label": "Toggle",
+          "command": "edit-numbers:toggle"
+        },
         {
-          "label": "edit-numbers",
-          "submenu": [
-            {
-              "label": "Toggle",
-              "command": "edit-numbers:toggle"
-            },
-            {
-              "label": "Settings",
-              "command": "edit-numbers:settings"
-            }
-          ]
+          "label": "Settings",
+          "command": "edit-numbers:settings"
         }
       ]
-    }
-  ]
+    }]
+  }]
 }

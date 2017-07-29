@@ -189,7 +189,7 @@ prefix = '', suffix = '', ignoreCase=false
 targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
   targetRadix = 'decimal', targetCase = 'both', useCustom = false  
 digits = 1, paddingChar = '0', sign = 'minus', align = 'right', radix = 'decimal', upperCase=true  
-**start = -2**, **end = 5**, increment = 1, add = 0, muliply = 1  
+**start = -2**, **end = 5**, increment = 1, add = 0, multiply = 1  
 
 Change conditions as above then push `editAll` button.  
 Then the result is as below.
@@ -212,7 +212,7 @@ prefix = '', suffix = '', ignoreCase=false
 targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
   targetRadix = 'decimal', targetCase = 'both', useCustom = false  
 **digits = 4**, **paddingChar = ' '**, sign = 'minus', align = 'right', radix = 'decimal', upperCase=true  
-start = -2, end = 5, increment = 1, add = 0, muliply = 1  
+start = -2, end = 5, increment = 1, add = 0, multiply = 1  
 
 Change conditions as above then push `editAll` button.  
 Then the result is as below.
@@ -235,7 +235,7 @@ prefix = '', suffix = '', ignoreCase=false
 targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
   targetRadix = 'decimal', targetCase = 'both', useCustom = false  
 digits = 4, paddingChar = ' ', **sign = 'plus'**, align = 'right', radix = 'decimal', upperCase=true  
-start = -2, end = 5, increment = 1, add = 0, muliply = 1  
+start = -2, end = 5, increment = 1, add = 0, multiply = 1  
 
 Change conditions as above then push `editAll` button.  
 Then the result is as below.
@@ -258,7 +258,7 @@ prefix = '', suffix = '', ignoreCase=false
 targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
   targetRadix = 'decimal', targetCase = 'both', useCustom = false  
 digits = 4, **paddingChar = '\*'**, **sign = 'space'**, align = 'right', radix = 'decimal', upperCase=true  
-start = -2, end = 5, increment = 1, add = 0, muliply = 1  
+start = -2, end = 5, increment = 1, add = 0, multiply = 1  
 
 Change conditions as above then push `editAll` button.  
 Then the result is as below.
@@ -281,7 +281,7 @@ prefix = '', suffix = '', ignoreCase=false
 targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
   targetRadix = 'decimal', targetCase = 'both', useCustom = false  
 digits = 4, **paddingChar = ' '**, **sign = 'minus'**, **align = 'right_lead_sign'**, radix = 'decimal', upperCase=true  
-start = -2, end = 5, increment = 1, add = 0, muliply = 1  
+start = -2, end = 5, increment = 1, add = 0, multiply = 1  
 
 Change conditions as above then push `editAll` button.  
 Then the result is as below.
@@ -304,7 +304,7 @@ prefix = '', suffix = '', ignoreCase=false
 targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
   targetRadix = 'decimal', targetCase = 'both', useCustom = false  
 digits = 4, **paddingChar = '\*'**, sign = 'minus', **align = 'left'**, radix = 'decimal', upperCase=true  
-start = -2, end = 5, increment = 1, add = 0, muliply = 1  
+start = -2, end = 5, increment = 1, add = 0, multiply = 1  
 
 Change conditions as above then push `editAll` button.  
 Then the result is as below.
@@ -327,7 +327,7 @@ prefix = '', suffix = '', ignoreCase=false
 targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
   targetRadix = 'decimal', targetCase = 'both', useCustom = false  
 digits = 4, **paddingChar = '0'**, sign = 'minus', **align = 'right'**, **radix = 'hexadecimal'**, upperCase=true  
-**start = 8**, **end = 0**, **increment = 2**, add = 0, muliply = 1  
+**start = 8**, **end = 0**, **increment = 2**, add = 0, multiply = 1  
 
 Change conditions as above then push `editAll` button.  
 Then the result is as below.
@@ -350,7 +350,7 @@ prefix = '', suffix = '', ignoreCase=false
 targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
   targetRadix = 'decimal', targetCase = 'both', useCustom = false  
 digits = 4, paddingChar = '0', sign = 'minus', align = 'right', radix = 'hexadecimal', **upperCase=false**  
-start = 8, end = 0, increment = 2, add = 0, muliply = 1  
+start = 8, end = 0, increment = 2, add = 0, multiply = 1  
 
 Change conditions as above then push `editAll` button.  
 Then the result is as below.
@@ -390,7 +390,7 @@ prefix = '', suffix = '', ignoreCase=false
 targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
   **targetRadix = 'hexadecimal'**, targetCase = 'both', useCustom = false  
 **digits = 4**, **paddingChar = ' '**, sign = 'minus', align = 'right', radix = 'hexadecimal', upperCase=true  
-start = 0, end = 0, **increment = 0**, add = 0, muliply = 1  
+start = 0, end = 0, **increment = 0**, add = 0, multiply = 1  
 
 Change conditions as above then push `editAll` button.  
 Then the result is as below.
@@ -431,7 +431,7 @@ Input text is as below.
 targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
   targetRadix = 'decimal', targetCase = 'both', useCustom = false  
 **digits = 4**, **paddingChar = ' '**, sign = 'minus', **align = 'right_lead_sign'**, radix = 'decimal', upperCase=true  
-start = 0, end = 0, **increment = 0**, add = 0, muliply = 1  
+start = 0, end = 0, **increment = 0**, add = 0, multiply = 1  
 
 Change conditions as above then push `editAll` button.  
 Then the result is as below.
@@ -473,7 +473,7 @@ Input text is as below.
 **targetPadding = '\*'**, **targetSign = 'space'**, **targetAlign = 'left'**,  
   targetRadix = 'decimal', targetCase = 'both', useCustom = false  
 **digits = 4**, paddingChar = '0', sign = 'minus', **align = 'right_lead_sign'**, radix = 'decimal', upperCase=true  
-start = 0, end = 0, **increment = 0**, add = 0, muliply = 1  
+start = 0, end = 0, **increment = 0**, add = 0, multiply = 1  
 
 Change conditions as above then push `editAll` button.  
 Then the result is as below.
@@ -492,7 +492,7 @@ Then the result is as below.
 0005
 ```
 
-# case5
+## case5
 
 Input text is as below.
 
@@ -514,7 +514,7 @@ Input text is as below.
 targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
   **targetRadix = 'hexadecimal'**, targetCase = 'both', useCustom = false  
 **digits = 4**, paddingChar = '0', sign = 'minus', align = 'right', radix = 'decimal', upperCase=true  
-start = 0, end = 0, **increment = 0**, **add = 100**, **muliply = 2**  
+start = 0, end = 0, **increment = 0**, **add = 100**, **multiply = 2**  
 
 Change conditions as above then push `editAll` button.  
 Then the result is as below.
@@ -532,7 +532,7 @@ Then the result is as below.
 0170
 ```
 
-## case5
+## case6
 
 input text is empty.
 
@@ -557,7 +557,7 @@ input text is empty.
 targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
   targetRadix = 'decimal', targetCase = 'both', useCustom = false  
 **digits = 4**, paddingChar = '0', sign = 'minus', align = 'right', **radix = 'hexadecimal'**, upperCase=true  
-**start = 1**, end = 0, increment = 1, add = 0, muliply = 1  
+**start = 1**, end = 0, increment = 1, add = 0, multiply = 1  
 
 Change conditions as above then push `editAll` button.  
 Then the result is as below.
@@ -575,7 +575,7 @@ Then the result is as below.
 000A
 ```
 
-## case6
+## case7
 
 Input text is as below.
 
@@ -594,7 +594,7 @@ Num 000 Data7 Price Note
 targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
   targetRadix = 'decimal', targetCase = 'both', useCustom = false  
 **digits = 6**, paddingChar = '0', sign = 'minus', align = 'right', radix = 'decimal', upperCase=true  
-start = 0, end = 0, increment = 1, add = 0, muliply = 1  
+start = 0, end = 0, increment = 1, add = 0, multiply = 1  
 
 Change conditions as above then push `editAll` button.  
 Then the result is as below.
@@ -609,7 +609,7 @@ Num 000005 Data6 Price Note
 Num 000006 Data7 Price Note
 ```
 
-## case7
+## case8
 
 Input text is as below.
 
@@ -628,7 +628,7 @@ Num 000006 Data7 Price Note
 targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
   targetRadix = 'decimal', targetCase = 'both', useCustom = false  
 **digits = 2**, paddingChar = '0', sign = 'minus', align = 'right', radix = 'decimal', upperCase=true  
-start = 0, end = 0, **increment = 0**, add = 0, muliply = 1  
+start = 0, end = 0, **increment = 0**, add = 0, multiply = 1  
 
 Change conditions as above then push `editAll` button.  
 Then the result is as below.
@@ -643,7 +643,7 @@ Num 000005 Data6 00Price5 Note
 Num 000006 Data7 00Price6 Note
 ```
 
-## case8
+## case9
 
 Input text is as below.
 
@@ -670,7 +670,7 @@ FE:
 targetPadding = '0', targetSign = 'minus', targetAlign = 'right',  
   **targetRadix = 'hexadecimal'**, targetCase = 'both', **useCustom = true**, **customTarget='0\*-?[0-9a-fA-F]+|(  )'**  
 **digits = 2**, paddingChar = '0', sign = 'minus', align = 'right', **radix = 'hexadecimal'**, upperCase=true  
-start = 0, end = 0, increment = 1, add = 0, muliply = 1  
+start = 0, end = 0, increment = 1, add = 0, multiply = 1  
 
 Change conditions as above then push `editAll` button.  
 Then the result is as below.
