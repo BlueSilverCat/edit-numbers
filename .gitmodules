@@ -1,0 +1,3 @@
+[submodule "lib/utilities"]
+	path = lib/utilities
+	url = https://github.com/BlueSilverCat/jsUtilities.git
