@@ -31,6 +31,8 @@ Edit (serial) numbers in the editor.
             Modify matching numbers by arithmetic options.  
     -   `mark buton`  
         Highlight all matching numbers.  
+        Mark only the selected range.  
+        If range is not selected, select the entire editor.
     -   `first button`  
         Select a first matching number.
     -   `previous button`  
