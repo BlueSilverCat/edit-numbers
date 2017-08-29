@@ -1,6 +1,11 @@
+## 0.4.0
+
+-   Use npm package.
+
 ## 0.3.0 - Mark only the selected range
-- Mark only the selected range.  
-  If range is not selected, select the entire editor.
+
+-   Mark only the selected range.  
+    If range is not selected, select the entire editor.
 
 ## 0.2.0 - Change UI
 
